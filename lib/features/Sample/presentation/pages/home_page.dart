@@ -7,18 +7,11 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final bloc = context.watch<TestBloc>().state;
-
     return Scaffold(
       appBar: AppBar(),
       body: Center(
         child: Column(
           children: [
-            Text(
-              '${bloc.counter}',
-              style: TextStyle(fontWeight: FontWeight.bold),
-            ),
-
             ElevatedButton(
               onPressed: () {
                 context.read<TestBloc>().add(TestEventIncrement());
