@@ -1,8 +1,3 @@
 abstract class ApiConsumer {
-  Future<dynamic> get({
-    required String q,
-    required String from,
-    required String apiKey,
-    required String sortBy,
-  });
+  Future<dynamic> get(String path, {Object? data, Map<String, dynamic>? query});
 }
